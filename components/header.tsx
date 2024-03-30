@@ -1,0 +1,43 @@
+import Image from "next/image";
+import Link from "next/link";
+export default function Header() {
+  return (
+    <header className="mx-6 md:mx-10 lg:mx-[165px] flex justify-between my-[35px] lg:my-[64px]">
+      <Image
+        alt="logo"
+        src="/assets/shared/desktop/logo-dark.png"
+        width={202}
+        height={20}
+        className="w-auto h-auto "
+      />
+      <Image
+        alt="burger"
+        src="/assets/shared/mobile/icon-hamburger.svg"
+        width={24}
+        height={20}
+        className="w-auto h-auto md:hidden"
+      />
+
+      <div className="md:inline-flex hidden gap-[42px]">
+        <Link
+          href="#"
+          className="leading-[14px] tracking-[2px] hover:underline decoration-slate-400  text-[14px] font-normal text-secondary-dark-gray"
+        >
+          OUR COMPANY
+        </Link>
+        <Link
+          href="#"
+          className="leading-[14px] tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
+        >
+          LOCATION
+        </Link>
+        <Link
+          href="#"
+          className="leading-[14px] tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
+        >
+          CONTACT
+        </Link>
+      </div>
+    </header>
+  );
+}
