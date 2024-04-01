@@ -30,6 +30,14 @@
     background-position: center;
 }
 
+.details-bg {
+    background-image: url("../public/assets/shared/desktop/bg-pattern-small-circle.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: right top;
+    ;
+}
+
 @media only screen and (min-width: 768px) {
     .fil {
         background-repeat: no-repeat;
@@ -47,6 +55,13 @@
         height: 50px;
     }
 
+    .details-bg {
+        background-image: url("../public/assets/web-design/desktop/bg-pattern-intro-web.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+
     .footer {
         background-size: cover;
     }
@@ -58,6 +73,10 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: right;
+    }
+
+    .details-bg {
+        background-size: 80%;
     }
 
     .desk-phone {

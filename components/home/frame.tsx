@@ -1,7 +1,6 @@
 import { WebDesign, AppDesign, GraphicDesign, Resources } from "./design";
 import Footer from "../footer";
-import Image from "next/image";
-export default function Frame() {
+export default function HomePage() {
   return (
     <main>
       <div className="md:mx-10 lg:mx-[165px]">

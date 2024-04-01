@@ -1,11 +1,12 @@
 import Header from "@/components/header";
-import Frame from "@/components/home/frame";
+import WebDesign from "@/components/details/web_design";
+import HomePage from "@/components/home/frame";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <Frame />
+      <WebDesign />
     </div>
   );
 }
