@@ -18,6 +18,8 @@ const config: Config = {
         "mob-graphic-design":
           "url('/assets/home/mobile/image-graphic-design.jpg')",
         "des-app-design": "url('/assets/home/desktop/image-app-design.jpg')",
+        "des-web2-design":
+          "url('/assets/home/desktop/image-web-design-small.jpg')",
         "des-web-design":
           "url('/assets/home/desktop/image-web-design-large.jpg')",
         "des-graphic-design":
