@@ -9,6 +9,10 @@
     background-position: right;
 }
 
+.three-circle {
+    background-image: url('../public/assets/shared/desktop/bg-pattern-three-circles.svg');
+}
+
 .phone {
     background-image: url('../public/assets/home/desktop/image-hero-phone.png');
     background-repeat: no-repeat;
@@ -36,6 +40,11 @@
     background-size: 80%;
     background-position: right top;
     ;
+}
+
+.about-bg {
+    background-image: url("../public/assets/about/mobile/bg-pattern-hero-about-mobile.svg");
+    background-position: right 25%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -88,6 +97,12 @@
         width: 100%;
     }
 
+    .about-bg {
+        background-image: url("../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top left;
+    }
 
 }
 
