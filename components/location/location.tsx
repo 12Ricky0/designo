@@ -1,18 +1,26 @@
 import Image from "next/image";
 import Footer from "../footer";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+import Map from "../map";
+const MapComponent = dynamic(() => import("../map"), {
+  loading: () => <p>A map is loading</p>,
+  ssr: false, // This line is important. It's what prevents server-side render
+});
 
 export default function Location() {
   return (
     <section>
       <div className="mb-10 md:mb-[120px] lg:flex flex-row-reverse lg:mx-[165px] md:mx-10">
-        <Image
+        {/* <Image
           src="/assets/locations/desktop/image-map-canada.png"
           alt="Location"
           width={375}
           height={320}
           className="lg:w-[30%] w-[100%] md:rounded-lg md:hidden lg:block lg:ml-[30px]"
           quality={100}
-        />
+        /> */}
+        <MapComponent />
         <Image
           src="/assets/locations/tablet/image-map-canada.png"
           alt="Location"

@@ -5,6 +5,8 @@ import AppDesign from "@/components/details/app_design";
 import GraphicDesign from "@/components/details/graphic_design";
 import About from "@/components/about/about";
 import Location from "@/components/location/location";
+import Map from "@/components/map";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   return (
