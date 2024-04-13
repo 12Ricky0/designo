@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
   return (
     <footer>
-      <div className="bg-primary-peach rounded-lg mx-6 lg:mx-[165px] md:mx-[40px] footer py-[60px] translate-y-[180px] md:translate-y-[100px] text-white">
+      <div
+        className={`bg-primary-peach ${
+          usePathname() == "/contact" && "hidden"
+        } rounded-lg mx-6 lg:mx-[165px] md:mx-[40px] footer py-[60px] translate-y-[180px] md:translate-y-[100px] text-white`}
+      >
         <article className="text-center lg:text-left mx-6 lg:mx-[95px] lg:flex justify-between items-center">
           <div>
             <h1 className="text-[32px] font-medium leading-[32px]">
@@ -22,7 +28,13 @@ export default function Footer() {
           </button>
         </article>
       </div>
-      <section className="text-center pt-[200px] md:pt-[100px] bg-primary-black">
+      <section
+        className={`text-center ${
+          usePathname() == "/contact"
+            ? "pt-0 md:pt-0"
+            : "pt-[200px] md:pt-[100px]"
+        } bg-primary-black`}
+      >
         <div className=" mx-6 lg:mx-[165px] md:mx-[40px] flex flex-col md:flex-row md:justify-between pt-16">
           <div className=" mb-8 border-b-[0.1px] md:border-0 border-b-gray-700">
             <Image

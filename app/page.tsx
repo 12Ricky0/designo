@@ -7,12 +7,13 @@ import About from "@/components/about/about";
 import Location from "@/components/location/location";
 import Map from "@/components/map";
 import dynamic from "next/dynamic";
+import Contact from "@/components/contact/contact";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <Location />
+      <Contact />
     </div>
   );
 }

@@ -47,6 +47,12 @@
     background-position: right 25%;
 }
 
+.contact-bg {
+    background-image: url("../public/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg");
+    background-position: 25% 10%;
+
+}
+
 @media only screen and (min-width: 768px) {
     .fil {
         background-repeat: no-repeat;
@@ -73,6 +79,13 @@
 
     .footer {
         background-size: cover;
+    }
+
+    .contact-bg {
+        background-image: url("../public/assets/contact/desktop/bg-pattern-hero-desktop.svg");
+        background-position: 00% 100%;
+        background-repeat: no-repeat;
+
     }
 
 }
@@ -109,6 +122,8 @@
         background-repeat: no-repeat;
         background-position: bottom left;
     }
+
+
 
 }
 
