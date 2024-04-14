@@ -2,12 +2,15 @@
 import getData from "@/lib/actions";
 import ImgContainer from "../image-container";
 import Footer from "../footer";
+import { useFormState } from "react-dom";
 
 export default function Contact() {
+  const initialState = { message: null, errors: {} };
+  const [state, formAction] = useFormState(getData, initialState);
   return (
     <section>
       <div className="bg-primary-peach contact-bg items-center py-12 lg:mx-[165px] md:mx-[40px] md:rounded-lg lg:flex justify-between">
-        <article className=" text-white text-center md:text-left mx-6 lg:mx-[95px]">
+        <article className=" text-white text-center md:text-left mx-6 lg:mx-[95px] lg:w-[60%]">
           <h1 className="text-[32px] md:text-[48px] md:leading-[48px] leading-[36px] font-medium mb-7">
             Contact Us
           </h1>
@@ -20,7 +23,7 @@ export default function Contact() {
         </article>
 
         <form
-          action={getData}
+          action={formAction}
           className="mx-6 text-center md:text-right lg:mx-0 lg:mr-[95px]"
         >
           <input
@@ -35,6 +38,14 @@ export default function Contact() {
             placeholder="Email"
             name="email"
           />
+          <div id="customer-error" aria-live="polite" aria-atomic="true">
+            {state?.errors?.email &&
+              state.errors.email.map((error: string) => (
+                <p className="mt-2 text-sm text-red-500" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
           <input
             className="bg-transparent p-[11px] focus:border-b-2 outline-0 mb-[25px] text-[15px] w-[100%] font-medium leading-[26px] placeholder:text-secondary-light-gray placeholder:opacity-50 text-white border-b"
             type="number"

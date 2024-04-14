@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function WebDesign() {
   return (
@@ -8,9 +9,12 @@ export function WebDesign() {
           WEB DESIGN
         </h1>
         <div className="inline-flex items-center gap-4 mt-4">
-          <span className="text-[15px] tracking-[5px] font-medium text-white ">
+          <Link
+            href="/webdesign"
+            className="text-[15px] tracking-[5px] font-medium text-white "
+          >
             VIEW PROJECTS
-          </span>
+          </Link>
           <span>
             <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -36,9 +40,12 @@ export function AppDesign() {
           APP DESIGN
         </h1>
         <div className="inline-flex items-center gap-4 mt-4">
-          <span className="text-[15px] tracking-[5px] font-medium text-white ">
+          <Link
+            href="/appdesign"
+            className="text-[15px] tracking-[5px] font-medium text-white "
+          >
             VIEW PROJECTS
-          </span>
+          </Link>
           <span>
             <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -63,9 +70,12 @@ export function GraphicDesign() {
           GRAPHIC DESIGN
         </h1>
         <div className="inline-flex items-center gap-4 mt-4">
-          <span className="text-[15px] tracking-[5px] font-medium text-white ">
+          <Link
+            href="/graphdesign"
+            className="text-[15px] tracking-[5px] font-medium text-white "
+          >
             VIEW PROJECTS
-          </span>
+          </Link>
           <span>
             <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg">
               <path

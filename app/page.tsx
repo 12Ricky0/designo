@@ -1,4 +1,3 @@
-import Header from "@/components/header";
 import WebDesign from "@/components/details/web_design";
 import HomePage from "@/components/home/frame";
 import AppDesign from "@/components/details/app_design";
@@ -12,8 +11,7 @@ import Contact from "@/components/contact/contact";
 export default function Home() {
   return (
     <div>
-      <Header />
-      <Contact />
+      <HomePage />
     </div>
   );
 }

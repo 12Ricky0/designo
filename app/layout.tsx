@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -16,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${jost.className}`}>{children}</body>
+      <body className={`antialiased ${jost.className}`}>
+        {" "}
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
