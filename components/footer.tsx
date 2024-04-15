@@ -50,19 +50,19 @@ export default function Footer() {
           <div className="inline-flex flex-col md:flex-row gap-8">
             <Link
               className="text-[14px] leading-[14px] hover:underline decoration-slate-400 text-white tracking-[2px] "
-              href="#"
+              href="about"
             >
               OUR COMPANY
             </Link>
             <Link
               className="text-[14px] my-8 md:my-0 leading-[14px] hover:underline decoration-slate-400 text-white tracking-[2px] "
-              href="#"
+              href="location"
             >
               LOCATIONS
             </Link>
             <Link
               className="text-[14px] leading-[14px] hover:underline decoration-slate-400 text-white tracking-[2px] "
-              href="#"
+              href="contact"
             >
               CONTACT
             </Link>

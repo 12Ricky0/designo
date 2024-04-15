@@ -4,7 +4,7 @@ import ImgContainer from "../image-container";
 import Footer from "../footer";
 import { useFormState } from "react-dom";
 
-export default function Contact() {
+export default function ContactForm() {
   const initialState = { message: null, errors: {} };
   const [state, formAction] = useFormState(getData, initialState);
   return (

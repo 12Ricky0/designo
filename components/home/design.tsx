@@ -101,9 +101,12 @@ export function DetailsWebDesign() {
           WEB DESIGN
         </h1>
         <div className="inline-flex items-center gap-4 mt-4">
-          <span className="text-[15px] tracking-[5px] font-medium text-white ">
+          <Link
+            href="/webdesign"
+            className="text-[15px] tracking-[5px] font-medium text-white "
+          >
             VIEW PROJECTS
-          </span>
+          </Link>
           <span>
             <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg">
               <path
