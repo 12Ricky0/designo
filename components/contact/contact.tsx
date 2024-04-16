@@ -3,10 +3,13 @@ import getData from "@/lib/actions";
 import ImgContainer from "../image-container";
 import Footer from "../footer";
 import { useFormState } from "react-dom";
+import Image from "next/image";
+import { State } from "@/lib/actions";
 
 export default function ContactForm() {
   const initialState = { message: null, errors: {} };
   const [state, formAction] = useFormState(getData, initialState);
+
   return (
     <section>
       <div className="bg-primary-peach contact-bg items-center py-12 lg:mx-[165px] md:mx-[40px] md:rounded-lg lg:flex justify-between">
@@ -26,26 +29,84 @@ export default function ContactForm() {
           action={formAction}
           className="mx-6 text-center md:text-right lg:mx-0 lg:mr-[95px]"
         >
+          <div
+            id="customer-error"
+            aria-live="polite"
+            aria-atomic="true"
+            className="absolute right-0 mx-[260px] pt-[9px] "
+          >
+            {state?.errors?.name && (
+              <div className="flex">
+                <p className="mt-2 text-sm text-white font-medium">
+                  {state.errors.name}
+                </p>
+                <Image
+                  src="/assets/contact/desktop/icon-error.svg"
+                  alt="error"
+                  width={20}
+                  height={20}
+                  className="pt-[9px] ml-[9px]"
+                />
+              </div>
+            )}
+          </div>
+
           <input
             className="bg-transparent p-[11px] focus:border-b-2 outline-0 mb-[25px] text-[15px] w-[100%] font-medium leading-[26px] placeholder:text-secondary-light-gray placeholder:opacity-50 text-white border-b"
             type="text"
             placeholder="Name"
             name="name"
           />
+          <div
+            id="customer-error"
+            aria-live="polite"
+            aria-atomic="true"
+            className="absolute right-0 mx-[260px] pt-[9px] "
+          >
+            {state?.errors?.email && (
+              <div className="flex">
+                <p className="mt-2 text-sm text-white font-medium">
+                  {state.errors.email}
+                </p>
+                <Image
+                  src="/assets/contact/desktop/icon-error.svg"
+                  alt="error"
+                  width={20}
+                  height={20}
+                  className="pt-[9px] ml-[9px]"
+                />
+              </div>
+            )}
+          </div>
+
           <input
             className="bg-transparent p-[11px] focus:border-b-2 outline-0 mb-[25px] text-[15px] w-[100%] font-medium leading-[26px] placeholder:text-secondary-light-gray placeholder:opacity-50 text-white border-b"
             type="email"
             placeholder="Email"
             name="email"
           />
-          <div id="customer-error" aria-live="polite" aria-atomic="true">
-            {state?.errors?.email &&
-              state.errors.email.map((error: string) => (
-                <p className="mt-2 text-sm text-red-500" key={error}>
-                  {error}
+          <div
+            id="customer-error"
+            aria-live="polite"
+            aria-atomic="true"
+            className="absolute right-0 mx-[260px] pt-[9px] "
+          >
+            {state?.errors?.number && (
+              <div className="flex">
+                <p className="mt-2 text-sm text-white font-medium">
+                  {state.errors.number}
                 </p>
-              ))}
+                <Image
+                  src="/assets/contact/desktop/icon-error.svg"
+                  alt="error"
+                  width={20}
+                  height={20}
+                  className="pt-[9px] ml-[9px]"
+                />
+              </div>
+            )}
           </div>
+
           <input
             className="bg-transparent p-[11px] focus:border-b-2 outline-0 mb-[25px] text-[15px] w-[100%] font-medium leading-[26px] placeholder:text-secondary-light-gray placeholder:opacity-50 text-white border-b"
             type="number"

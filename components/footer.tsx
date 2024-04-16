@@ -24,9 +24,12 @@ export default function Footer() {
               how our expertise can help your business grow.
             </p>
           </div>
-          <button className="bg-white text-primary-black text-[15px] hover:bg-secondary-light-peach hover:text-white font-medium rounded-lg w-[152px] h-14">
+          <Link
+            href="/contact"
+            className="bg-white text-primary-black mx-auto text-[15px] flex justify-center items-center hover:bg-secondary-light-peach hover:text-white font-medium rounded-lg w-[152px] h-14"
+          >
             GET IN TOUCH
-          </button>
+          </Link>
         </article>
       </div>
       <section
