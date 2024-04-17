@@ -64,7 +64,7 @@ export function AppDesign() {
 }
 export function GraphicDesign() {
   return (
-    <div className="bg-mob-web-design md:bg-tab-graphic-design lg:bg-des-graphic-design col-span-2 lg:w-[100%] mx-6 md:mx-0 h-[250px] lg:h-[308px] mb-6 lg:mb-0 flex justify-center items-center bg-no-repeat bg-cover bg-center rounded-lg">
+    <div className="bg-mob-graphic-design md:bg-tab-graphic-design lg:bg-des-graphic-design col-span-2 lg:w-[100%] mx-6 md:mx-0 h-[250px] lg:h-[308px] mb-6 lg:mb-0 flex justify-center items-center bg-no-repeat bg-cover bg-center rounded-lg">
       <div>
         <h1 className="text-[28px] md:text-[40px] md:tracking-[2px] md:leading-[48px] leading-9 tracking-[1.4px] font-medium text-white ">
           GRAPHIC DESIGN

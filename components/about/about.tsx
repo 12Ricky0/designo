@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ImgContainer from "../image-container";
 import Footer from "../footer";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -102,8 +103,8 @@ export default function About() {
           <h1 className="text-[20px] leading-[26px] tracking-[5px] font-medium my-8">
             CANADA
           </h1>
-          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach text-white">
-            SEE LOCATION
+          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] hover:bg-secondary-light-peach bg-primary-peach text-white">
+            <Link href="/location">SEE LOCATION</Link>
           </button>
         </div>
 
@@ -112,8 +113,8 @@ export default function About() {
           <h1 className="text-[20px] leading-[26px] tracking-[5px] font-medium my-8">
             AUSTRALIA
           </h1>
-          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach text-white">
-            SEE LOCATION
+          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] hover:bg-secondary-light-peach bg-primary-peach text-white">
+            <Link href="/location">SEE LOCATION</Link>
           </button>
         </div>
 
@@ -122,8 +123,8 @@ export default function About() {
           <h1 className="text-[20px] leading-[26px] tracking-[5px] font-medium my-8">
             UNITED KINGDOM
           </h1>
-          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach text-white">
-            SEE LOCATION
+          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] hover:bg-secondary-light-peach bg-primary-peach text-white">
+            <Link href="/location">SEE LOCATION</Link>
           </button>
         </div>
       </div>

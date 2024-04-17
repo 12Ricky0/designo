@@ -4,7 +4,7 @@ import ImgContainer from "../image-container";
 import Footer from "../footer";
 import { useFormState } from "react-dom";
 import Image from "next/image";
-import { State } from "@/lib/actions";
+import Link from "next/link";
 
 export default function ContactForm() {
   const initialState = { message: null, errors: {} };
@@ -33,7 +33,7 @@ export default function ContactForm() {
             id="customer-error"
             aria-live="polite"
             aria-atomic="true"
-            className="absolute right-0 mx-[260px] pt-[9px] "
+            className="absolute right-0 lg:mx-[260px] md:mx-[64px] mx-6 pt-[9px] "
           >
             {state?.errors?.name && (
               <div className="flex">
@@ -61,7 +61,7 @@ export default function ContactForm() {
             id="customer-error"
             aria-live="polite"
             aria-atomic="true"
-            className="absolute right-0 mx-[260px] pt-[9px] "
+            className="absolute right-0 lg:mx-[260px] md:mx-[64px] mx-6 pt-[9px] "
           >
             {state?.errors?.email && (
               <div className="flex">
@@ -89,7 +89,7 @@ export default function ContactForm() {
             id="customer-error"
             aria-live="polite"
             aria-atomic="true"
-            className="absolute right-0 mx-[260px] pt-[9px] "
+            className="absolute right-0 lg:mx-[260px] md:mx-[64px] mx-6 pt-[9px] "
           >
             {state?.errors?.number && (
               <div className="flex">
@@ -127,34 +127,42 @@ export default function ContactForm() {
           </button>
         </form>
       </div>
-      <div className="my-[120px] lg:flex lg:mx-[165px] justify-around z-40 relative">
-        <div className="text-center mb-12">
+      <div className="my-[120px] lg:flex lg:mx-[165px] justify-around ">
+        <Image
+          src="/assets/shared/desktop/bg-pattern-leaf.svg"
+          width={1006}
+          alt="passionate"
+          height={594}
+          className="right-0 hidden lg:block translate-y-[120px] absolute "
+        />
+
+        <div className="text-center mb-12 relative z-50">
           <ImgContainer src="/assets/shared/desktop/illustration-canada.svg" />
           <h1 className="text-[20px] leading-[26px] tracking-[5px] font-medium my-8">
             CANADA
           </h1>
-          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach text-white">
-            SEE LOCATION
+          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach hover:bg-secondary-light-peach text-white">
+            <Link href="/location">SEE LOCATION</Link>
           </button>
         </div>
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 relative z-50">
           <ImgContainer src="/assets/shared/desktop/illustration-australia.svg" />
           <h1 className="text-[20px] leading-[26px] tracking-[5px] font-medium my-8">
             AUSTRALIA
           </h1>
-          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach text-white">
-            SEE LOCATION
+          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach hover:bg-secondary-light-peach text-white">
+            <Link href="/location">SEE LOCATION</Link>
           </button>
         </div>
 
-        <div className="text-center">
+        <div className="text-center relative z-50">
           <ImgContainer src="/assets/shared/desktop/illustration-united-kingdom.svg" />
           <h1 className="text-[20px] leading-[26px] tracking-[5px] font-medium my-8">
             UNITED KINGDOM
           </h1>
-          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach text-white">
-            SEE LOCATION
+          <button className="rounded-lg text-[15px] tracking-[1px] w-[152px] h-[56px] bg-primary-peach hover:bg-secondary-light-peach text-white">
+            <Link href="/location">SEE LOCATION</Link>
           </button>
         </div>
       </div>

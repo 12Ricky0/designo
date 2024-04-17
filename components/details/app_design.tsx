@@ -25,7 +25,7 @@ export default function AppDesign() {
             </>
           }
         />
-        <section className="mx-6 lg:mx-0 md:mx-10 lg:grid grid-cols-3 grid-rows-2 gap-[30px]">
+        <section className="mx-6 mb-[96px] lg:mx-0 md:mx-10 lg:grid grid-cols-3 grid-rows-2 gap-[30px]">
           <Container
             src="/assets/app-design/desktop/image-airfilter.jpg"
             heading="AIRFILTER"

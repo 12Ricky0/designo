@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="relative z-50">
       <div
         className={`bg-primary-peach ${
           usePathname() == "/contact" && "hidden"
@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <Link
             href="/contact"
-            className="bg-white text-primary-black mx-auto text-[15px] flex justify-center items-center hover:bg-secondary-light-peach hover:text-white font-medium rounded-lg w-[152px] h-14"
+            className="bg-white text-primary-black text-[15px] mx-auto md:mx-0 flex justify-center items-center hover:bg-secondary-light-peach hover:text-white font-medium rounded-lg w-[152px] h-14"
           >
             GET IN TOUCH
           </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
             : "pt-[200px] md:pt-[100px]"
         } bg-primary-black`}
       >
-        <div className=" mx-6 lg:mx-[165px] md:mx-[40px] flex flex-col md:flex-row md:justify-between pt-16">
+        <div className=" mx-6 lg:mx-[165px] md:mx-[40px] flex flex-col md:flex-row md:justify-between pt-16 ">
           <div className=" mb-8 border-b-[0.1px] md:border-0 border-b-gray-700">
             <Image
               alt="logo"

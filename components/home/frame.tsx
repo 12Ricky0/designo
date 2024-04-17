@@ -1,5 +1,6 @@
 import { WebDesign, AppDesign, GraphicDesign, Resources } from "./design";
 import Footer from "../footer";
+import Link from "next/link";
 export default function HomePage() {
   return (
     <main>
@@ -16,13 +17,11 @@ export default function HomePage() {
             </p>
 
             <button className="border-0 bg-white hover:bg-secondary-light-peach hover:text-white rounded-lg px-6 py-[18px] text-[15px] font-medium text-secondary-dark-gray">
-              LEARN MORE
+              <Link href="/about">LEARN MORE</Link>
             </button>
           </article>
           <div className="phone lg:hidden absolute bottom-0 w-[100%]" />
           <div className="desk-phone w-[100] lg:inline-block sm:hidden" />
-          {/* <div className="lg:inline-block w-[100%] bg-center sm:hidden bg-phone-img h-[550px] ">
-          </div> */}
         </section>
         <div className="lg:grid grid-cols-4 grid-rows-4 gap-6">
           <WebDesign />

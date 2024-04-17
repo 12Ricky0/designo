@@ -38,41 +38,37 @@ export default async function getData(prevState: State, formdata: FormData) {
   });
 
   if (!validatedData.success) {
-    console.log(validatedData.error.flatten().fieldErrors);
-
     return {
       errors: validatedData.error.flatten().fieldErrors,
       message: "Missing Fields. Failed to Create Invoice.",
     };
-  } else {
-    console.log(validatedData.success);
   }
 
   try {
     const { name, email, number, message } = validatedData.data;
     console.log(name);
 
-    // let body = {
-    //   user: {
-    //     firstName: name,
-    //     phone: number,
-    //     email: email,
-    //     message: message,
-    //   },
-    // };
+    let body = {
+      user: {
+        firstName: name,
+        phone: number,
+        email: email,
+        message: message,
+      },
+    };
 
     let url =
       "https://api.sheety.co/beab2cddb370211dde126436f6b56800/flightDeals/users";
 
-    // const response = await fetch(url, {
-    //   method: "POST",
-    //   body: JSON.stringify(body),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-    // const dat = await response.json();
-    // console.log(dat);
+    const response = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const dat = await response.json();
+    console.log(dat);
   } catch (error) {
     console.error(error);
     return {

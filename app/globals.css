@@ -6,7 +6,7 @@
     background-image: url('../public/assets/home/desktop/bg-pattern-hero-home.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: left 100%;
 }
 
 .three-circle {
