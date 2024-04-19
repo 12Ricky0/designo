@@ -50,8 +50,8 @@ export default function GraphicDesign() {
           <AppDesign />
           <DetailsWebDesign />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </section>
   );
 }

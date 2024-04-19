@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <Link
             href="/contact"
-            className="bg-white text-primary-black text-[15px] mx-auto md:mx-0 flex justify-center items-center hover:bg-secondary-light-peach hover:text-white font-medium rounded-lg w-[152px] h-14"
+            className="bg-white text-primary-black text-[15px] mx-auto lg:mx-0 flex justify-center items-center hover:bg-secondary-light-peach hover:text-white font-medium rounded-lg w-[152px] h-14"
           >
             GET IN TOUCH
           </Link>

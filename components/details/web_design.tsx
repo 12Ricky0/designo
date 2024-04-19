@@ -70,8 +70,8 @@ export default function WebDesign() {
           <AppDesign />
           <GraphicDesign />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </section>
   );
 }

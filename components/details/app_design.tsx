@@ -60,8 +60,8 @@ export default function AppDesign() {
           <DetailsWebDesign />
           <GraphicDesign />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </section>
   );
 }
