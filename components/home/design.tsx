@@ -1,13 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function WebDesign() {
+  const router = useRouter();
   return (
     <div className="bg-mob-web-design md:bg-tab-web-design lg:bg-des-web-design mx-6 bg-cover md:mx-0 lg:h-[640px] lg:w-[100%] h-[250px] mb-6 lg:mb-0 flex justify-center items-center bg-no-repeat row-span-2 rounded-lg">
-      <div>
-        <h1 className="text-[28px] md:text-[40px] md:tracking-[2px] md:leading-[48px] leading-9 tracking-[1.4px] font-medium text-white ">
+      <div
+        onClick={() => router.push("webdesign")}
+        className="hover:bg-primary-peach transition delay-150 duration-300 ease-in-out cursor-pointer opacity-80 w-[100%] h-[100%] rounded-lg flex items-center justify-center flex-col "
+      >
+        <h1 className="text-[28px] md:text-[40px] md:tracking-[2px] md:leading-[48px] leading-9 tracking-[1.4px] font-medium text-white">
           WEB DESIGN
         </h1>
+
         <div className="inline-flex items-center gap-4 mt-4">
           <Link
             href="/webdesign"
@@ -33,9 +41,13 @@ export function WebDesign() {
 }
 
 export function AppDesign() {
+  const router = useRouter();
   return (
     <div className="bg-mob-app-design row-span-1 md:bg-tab-app-design lg:bg-des-app-design mx-6 md:mx-0 lg:w-[100%] h-[250px] lg:h-[308px] col-span-2 mb-6 lg:mb-0 flex justify-center items-center bg-no-repeat bg-cover bg-center rounded-lg">
-      <div>
+      <div
+        onClick={() => router.push("appdesign")}
+        className="hover:bg-primary-peach transition delay-150 duration-300 ease-in-out cursor-pointer opacity-80 w-[100%] h-[100%] rounded-lg flex items-center justify-center flex-col "
+      >
         <h1 className="text-[28px] md:text-[40px] md:tracking-[2px] md:leading-[48px] leading-9 tracking-[1.4px] font-medium text-white ">
           APP DESIGN
         </h1>
@@ -63,10 +75,14 @@ export function AppDesign() {
   );
 }
 export function GraphicDesign() {
+  const router = useRouter();
   return (
     <div className="bg-mob-graphic-design md:bg-tab-graphic-design lg:bg-des-graphic-design col-span-2 lg:w-[100%] mx-6 md:mx-0 h-[250px] lg:h-[308px] mb-6 lg:mb-0 flex justify-center items-center bg-no-repeat bg-cover bg-center rounded-lg">
-      <div>
-        <h1 className="text-[28px] md:text-[40px] md:tracking-[2px] md:leading-[48px] leading-9 tracking-[1.4px] font-medium text-white ">
+      <div
+        onClick={() => router.push("graphdesign")}
+        className="hover:bg-primary-peach transition delay-150 duration-300 ease-in-out cursor-pointer opacity-80 w-[100%] h-[100%] rounded-lg flex items-center justify-center flex-col "
+      >
+        <h1 className="text-[28px] md:text-[40px] md:tracking-[2px] md:leading-[48px] leading-9 tracking-[1.4px] font-medium text-white brightness-[150%]">
           GRAPHIC DESIGN
         </h1>
         <div className="inline-flex items-center gap-4 mt-4">
@@ -94,9 +110,13 @@ export function GraphicDesign() {
 }
 
 export function DetailsWebDesign() {
+  const router = useRouter();
   return (
     <div className="bg-mob-web-design md:bg-tab-web-design lg:bg-des-web2-design col-span-2 lg:w-[100%] mx-6 md:mx-0 h-[250px] lg:h-[308px] mb-6 lg:mb-0 flex justify-center items-center bg-no-repeat bg-cover bg-center rounded-lg">
-      <div>
+      <div
+        onClick={() => router.push("webdesign")}
+        className="hover:bg-primary-peach transition delay-150 duration-300 ease-in-out cursor-pointer opacity-80 w-[100%] h-[100%] rounded-lg flex items-center justify-center flex-col "
+      >
         <h1 className="text-[28px] md:text-[40px] md:tracking-[2px] md:leading-[48px] leading-9 tracking-[1.4px] font-medium text-white ">
           WEB DESIGN
         </h1>

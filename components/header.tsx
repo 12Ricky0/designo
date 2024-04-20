@@ -23,19 +23,19 @@ export default function Header() {
       <div className="md:inline-flex hidden gap-[42px]">
         <Link
           href="/about"
-          className="leading-[14px] tracking-[2px] hover:underline decoration-slate-400  text-[14px] font-normal text-secondary-dark-gray"
+          className="leading-[14px] transition-all ease-in-out delay-75 hover:scale-110 tracking-[2px] hover:underline decoration-slate-400  text-[14px] font-normal text-secondary-dark-gray"
         >
           OUR COMPANY
         </Link>
         <Link
           href="location"
-          className="leading-[14px] tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
+          className="leading-[14px] transition-all ease-in-out delay-75 hover:scale-110 tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
         >
           LOCATION
         </Link>
         <Link
           href="contact"
-          className="leading-[14px] tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
+          className="leading-[14px] transition-all ease-in-out delay-75 hover:scale-110 tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
         >
           CONTACT
         </Link>
