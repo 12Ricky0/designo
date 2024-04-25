@@ -29,7 +29,7 @@ export interface State {
   message?: string | null;
 }
 
-export default async function getData(prevState: State, formdata: FormData) {
+export async function getData(prevState: State, formdata: FormData) {
   const validatedData = UserData.safeParse({
     name: formdata.get("name"),
     email: formdata.get("email"),

@@ -1,5 +1,5 @@
 "use client";
-import getData from "@/lib/actions";
+import { getData } from "@/lib/actions";
 import ImgContainer from "../image-container";
 import Footer from "../footer";
 import { useFormState } from "react-dom";
@@ -8,8 +8,8 @@ import Link from "next/link";
 
 export default function ContactForm() {
   const initialState = { message: null, errors: {} };
-  const [state, formAction] = useFormState(getData, initialState);
 
+  const [state, dispatch] = useFormState(getData, initialState);
   return (
     <section>
       <div className="bg-primary-peach contact-bg items-center py-12 lg:mx-[165px] md:mx-[40px] md:rounded-lg lg:flex justify-between">
@@ -26,7 +26,7 @@ export default function ContactForm() {
         </article>
 
         <form
-          action={formAction}
+          action={dispatch}
           className="mx-6 text-center md:text-right lg:mx-0 lg:mr-[95px]"
         >
           <div

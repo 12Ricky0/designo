@@ -28,6 +28,7 @@ const config: Config = {
         "tab-web-design": "url('/assets/home/tablet/image-web-design.jpg')",
         "tab-graphic-design":
           "url('/assets/home/tablet/image-graphic-design.jpg')",
+        modal: "rgba(0, 0, 0, 0.5)",
       },
       colors: {
         primary: {
