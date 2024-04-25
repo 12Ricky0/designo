@@ -91,7 +91,7 @@ export default function ContactForm() {
             aria-atomic="true"
             className="absolute right-0 lg:mx-[260px] md:mx-[64px] mx-6 pt-[9px] "
           >
-            {state?.errors?.number && (
+            {/* {state?.errors?.number && (
               <div className="flex">
                 <p className="mt-2 text-sm text-white font-medium">
                   {state.errors.number}
@@ -104,7 +104,7 @@ export default function ContactForm() {
                   className="pt-[9px] ml-[9px]"
                 />
               </div>
-            )}
+            )} */}
           </div>
 
           <input

@@ -13,7 +13,7 @@ const UserData = z.object({
     })
     .email({ message: "Invalid email address" }),
   number: z
-    .string({
+    .number({
       required_error: "Can't be empty!",
     })
     .min(10, { message: "Must be 10 characters" })
@@ -67,8 +67,8 @@ export async function getData(prevState: State, formdata: FormData) {
         "Content-Type": "application/json",
       },
     });
-    const dat = await response.json();
-    console.log(dat);
+
+    return prevState;
   } catch (error) {
     console.error(error);
     return {
