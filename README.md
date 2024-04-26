@@ -22,7 +22,10 @@ Users are able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![./public/assets/home.png](./public/assets/home.png)
+![./public/assets/details.png](./public/assets/details.png)
+![./public/assets/location.png](./public/assets/location.png)
+![./public/assets/contact.png](./public/assets/contact.png)
 
 ### Links
 
