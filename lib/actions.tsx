@@ -1,5 +1,6 @@
 "use server";
 import { z } from "zod";
+import { redirect } from "next/navigation";
 
 const UserData = z.object({
   name: z
@@ -13,7 +14,7 @@ const UserData = z.object({
     })
     .email({ message: "Invalid email address" }),
   number: z
-    .number({
+    .string({
       required_error: "Can't be empty!",
     })
     .min(10, { message: "Must be 10 characters" })
@@ -23,6 +24,7 @@ const UserData = z.object({
 
 export interface State {
   errors?: {
+    number?: string[];
     name?: string[];
     email?: string[];
   };
@@ -46,7 +48,6 @@ export async function getData(prevState: State, formdata: FormData) {
 
   try {
     const { name, email, number, message } = validatedData.data;
-    console.log(name);
 
     let body = {
       user: {
@@ -67,12 +68,12 @@ export async function getData(prevState: State, formdata: FormData) {
         "Content-Type": "application/json",
       },
     });
-
-    return prevState;
   } catch (error) {
     console.error(error);
     return {
       message: "Error: Failed to submit data.",
     };
   }
+  redirect("/");
+  return { ...prevState };
 }

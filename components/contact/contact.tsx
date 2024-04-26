@@ -5,6 +5,20 @@ import Footer from "../footer";
 import { useFormState } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
+import { useFormStatus } from "react-dom";
+
+function Submit() {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      className="bg-white border-0 w-[152px] hover:text-white hover:bg-secondary-light-peach mt-[29px] h-[56px] rounded-lg font-medium text-[15px] tracking-[1px]"
+      type="submit"
+      disabled={pending}
+    >
+      {pending ? "SUBMITTING" : "SUBMIT"}
+    </button>
+  );
+}
 
 export default function ContactForm() {
   const initialState = { message: null, errors: {} };
@@ -91,7 +105,7 @@ export default function ContactForm() {
             aria-atomic="true"
             className="absolute right-0 lg:mx-[260px] md:mx-[64px] mx-6 pt-[9px] "
           >
-            {/* {state?.errors?.number && (
+            {state?.errors?.number && (
               <div className="flex">
                 <p className="mt-2 text-sm text-white font-medium">
                   {state.errors.number}
@@ -104,7 +118,7 @@ export default function ContactForm() {
                   className="pt-[9px] ml-[9px]"
                 />
               </div>
-            )} */}
+            )}
           </div>
 
           <input
@@ -118,13 +132,7 @@ export default function ContactForm() {
             placeholder="Your Message"
             name="message"
           />
-
-          <button
-            className="bg-white border-0 w-[152px] hover:text-white hover:bg-secondary-light-peach mt-[29px] h-[56px] rounded-lg font-medium text-[15px] tracking-[1px]"
-            type="submit"
-          >
-            SUBMIT
-          </button>
+          <Submit />
         </form>
       </div>
       <div className="my-[120px] lg:flex lg:mx-[165px] justify-around ">
