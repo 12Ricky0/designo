@@ -15,10 +15,11 @@ export default function HomePage() {
               fully responsive websites, app design, and engaging brand
               experiences. Find out more about our services.
             </p>
-
-            <button className="border-0 bg-white hover:bg-secondary-light-peach hover:text-white rounded-lg px-6 py-[18px] text-[15px] font-medium text-secondary-dark-gray">
-              <Link href="/about">LEARN MORE</Link>
-            </button>
+            <Link href="/about" className="relative z-50">
+              <button className="border-0 bg-white hover:bg-secondary-light-peach hover:text-white rounded-lg px-6 py-[18px] text-[15px] font-medium text-secondary-dark-gray">
+                LEARN MORE
+              </button>
+            </Link>
           </article>
           <div className="phone lg:hidden absolute bottom-0 w-[100%]" />
           <div className="desk-phone w-[100] lg:inline-block sm:hidden" />
