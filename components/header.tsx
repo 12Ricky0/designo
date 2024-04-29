@@ -37,13 +37,13 @@ export default function Header() {
             OUR COMPANY
           </Link>
           <Link
-            href="location"
+            href="/location"
             className="leading-[14px] transition-all ease-in-out delay-75 hover:scale-110 tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
           >
             LOCATION
           </Link>
           <Link
-            href="contact"
+            href="/contact"
             className="leading-[14px] transition-all ease-in-out delay-75 hover:scale-110 tracking-[2px] hover:underline decoration-slate-400 text-[14px] font-normal text-secondary-dark-gray"
           >
             CONTACT

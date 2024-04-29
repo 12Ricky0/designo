@@ -9,19 +9,19 @@ export default function Overlay() {
       <div className="bg-primary-black w-[100%] top-0 text-center z-[1000]">
         <div className="py-[48px]">
           <Link
-            href="#"
+            href="/about"
             className=" text-[24px] block tracking-[2px]  leading-[25px] text-white"
           >
             OUR COMPANY
           </Link>
           <Link
-            href="#"
+            href="/location"
             className=" text-[24px] block tracking-[2px] my-8  leading-[25px] text-white"
           >
             LOCATION
           </Link>
           <Link
-            href="#"
+            href="/contact"
             className=" text-[24px] block tracking-[2px]  leading-[25px] text-white"
           >
             CONTACT
