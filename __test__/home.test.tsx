@@ -10,10 +10,14 @@ import HomePage from "@/components/home/frame";
 import React, { useState } from "react";
 import Footer from "@/components/footer";
 import { useRouter } from "next/navigation";
+import { mocked } from "jest-mock";
 jest.mock("../components/overlay", () => {
   return jest.fn(() => <h1>Mocked Overlay</h1>);
 });
 
+// jest.mock("next/navigation");
+
+jest.mock("next/navigation");
 describe("Home component", () => {
   //   const mock = jest.fn().mockReturnValue(true);
   //   const useSateMock: any = (useState: any) => [useState, mock];
@@ -40,6 +44,10 @@ describe("Home component", () => {
   });
 });
 
-const pause = () => {
-  return new Promise((resolve) => setTimeout(resolve, 100));
-};
+describe("HomePage component", () => {
+  it("renders the home page correctly", () => {
+    render(<HomePage />);
+    const links = screen.getAllByRole("link", { name: /view projects/i });
+    expect(links).toHaveLength(3);
+  });
+});
