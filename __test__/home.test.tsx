@@ -9,12 +9,16 @@ import Header from "@/components/header";
 import HomePage from "@/components/home/frame";
 import React, { useState } from "react";
 import Footer from "@/components/footer";
+import { useRouter } from "next/navigation";
+jest.mock("../components/overlay", () => {
+  return jest.fn(() => <h1>Mocked Overlay</h1>);
+});
 
 describe("Home component", () => {
-  const mock = jest.fn().mockReturnValue(true);
-  const useSateMock: any = (useState: any) => [useState, mock];
+  //   const mock = jest.fn().mockReturnValue(true);
+  //   const useSateMock: any = (useState: any) => [useState, mock];
 
-  jest.spyOn(React, "useState").mockImplementation(useSateMock);
+  //   jest.spyOn(React, "useState").mockImplementation(useSateMock);
 
   it("renders the header correctly", async () => {
     render(<Header />);
@@ -24,7 +28,9 @@ describe("Home component", () => {
 
     const burger = screen.getByAltText("burger");
     await user.click(burger);
-    expect(mock).toHaveBeenCalled();
+    expect(
+      await screen.findByRole("heading", { level: 1 })
+    ).toBeInTheDocument();
   });
 
   it("renders the footer correctly", () => {
@@ -34,6 +40,6 @@ describe("Home component", () => {
   });
 });
 
-// const pause = () => {
-//   return new Promise((resolve) => setTimeout(resolve, 100));
-// };
+const pause = () => {
+  return new Promise((resolve) => setTimeout(resolve, 100));
+};
