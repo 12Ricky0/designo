@@ -9,13 +9,11 @@ import Header from "@/components/header";
 import HomePage from "@/components/home/frame";
 import React, { useState } from "react";
 import Footer from "@/components/footer";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { mocked } from "jest-mock";
 jest.mock("../components/overlay", () => {
   return jest.fn(() => <h1>Mocked Overlay</h1>);
 });
-
-// jest.mock("next/navigation");
 
 jest.mock("next/navigation");
 describe("Home component", () => {
@@ -50,4 +48,12 @@ describe("HomePage component", () => {
     const links = screen.getAllByRole("link", { name: /view projects/i });
     expect(links).toHaveLength(3);
   });
+
+  //   it("responds to user click", async () => {
+  //     render(<HomePage />);
+  //     const links = screen.getAllByRole("link", { name: /view projects/i });
+
+  //     await user.click(links[0]);
+  //     expect(spy).toHaveBeenCalledWith("view projects");
+  //   });
 });
