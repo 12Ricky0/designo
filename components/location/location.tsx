@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Footer from "../footer";
 import dynamic from "next/dynamic";
 const MapComponent = dynamic(() => import("../map"), {
