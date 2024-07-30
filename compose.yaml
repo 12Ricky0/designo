@@ -1,9 +1,8 @@
 services:
   designo:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - .:/app
+    image: temple4b/designo
+    # volumes:
+    #   - /app/node_modules
+    #   - .:/app
     ports:
       - 3000:3000
