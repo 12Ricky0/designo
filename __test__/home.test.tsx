@@ -9,7 +9,6 @@ import Header from "@/components/header";
 import HomePage from "@/components/home/frame";
 import React, { useState } from "react";
 import Footer from "@/components/footer";
-// import { useRouter } from "next/navigation";
 import { mocked } from "jest-mock";
 jest.mock("../components/overlay", () => {
   return jest.fn(() => <h1>Mocked Overlay</h1>);
