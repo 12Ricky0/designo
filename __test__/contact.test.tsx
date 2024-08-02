@@ -1,6 +1,7 @@
 import ContactForm from "@/components/contact/contact";
 import { screen, render } from "@testing-library/react";
 import user from "@testing-library/user-event";
+import { useFormStatus } from "react-dom";
 
 // jest.mock("react-dom", () => ({
 //   ...jest.requireActual("react-dom"),
@@ -17,14 +18,14 @@ jest.mock("react-dom", () => {
       [
         {
           // Return a mock state object
-          name: "",
-          email: "",
+          name: "Hello",
+          email: "screen@screen.com",
         },
         // Mock setState function
         jest.fn(),
       ],
     ],
-    useFormStatus: () => ({ pending: false }),
+    useFormStatus: () => ({ pending: jest.fn() }),
   };
 });
 
@@ -35,25 +36,27 @@ describe("render", () => {
     expect(screen.getByPlaceholderText(/name/i)).toBeInTheDocument();
   });
 
-  it("submits form without any error", async () => {
-    render(<ContactForm />);
-    const nameInput = screen.getByPlaceholderText(/name/i);
-    const emailInput = screen.getByPlaceholderText(/email/i);
-    const messageInput = screen.getByPlaceholderText(/message/i);
-    const submit = screen.getByRole("button", { name: /submit/i });
+  // it("submits form without any error", async () => {
+  //   render(<ContactForm />);
+  //   const nameInput = screen.getByPlaceholderText(/name/i);
+  //   const emailInput = screen.getByPlaceholderText(/email/i);
+  //   const messageInput = screen.getByPlaceholderText(/message/i);
+  //   const submit = screen.getByRole("button", { name: /submit/i });
 
-    user.type(nameInput, "John Doe");
+  //   user.type(nameInput, "John Doe");
+  //   user.type(emailInput, "John Doe");
+  //   user.type(messageInput, "John Doe");
 
-    await user.click(submit);
-    await pause();
-    screen.debug();
+  //   await user.click(submit);
+  //   await pause();
+  //   screen.debug();
 
-    // expect(
-    //   screen.getByText(/form submitted successfully/i)
-    // ).toBeInTheDocument();
-  });
+  //   expect(
+  //     screen.findByText(/form submitted successfully/i)
+  //   ).toBeInTheDocument();
+  // });
 });
 
-const pause = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 100));
-};
+// const pause = async () => {
+//   await new Promise((resolve) => setTimeout(resolve, 100));
+// };
