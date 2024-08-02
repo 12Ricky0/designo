@@ -18,6 +18,6 @@ it("renders LocationMap component", async () => {
   );
 });
 
-const pause = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 100));
-};
+// const pause = async () => {
+//   await new Promise((resolve) => setTimeout(resolve, 100));
+// };
