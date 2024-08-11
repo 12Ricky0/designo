@@ -1,6 +1,5 @@
 import LocationMap from "@/components/location/location";
 import { screen, render } from "@testing-library/react";
-import Map from "@/components/map";
 
 it("renders LocationMap component", async () => {
   render(<LocationMap />);

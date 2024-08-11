@@ -7,9 +7,8 @@ import { render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import Header from "@/components/header";
 import HomePage from "@/components/home/frame";
-import React, { useState } from "react";
+import React from "react";
 import Footer from "@/components/footer";
-import { mocked } from "jest-mock";
 jest.mock("../components/overlay", () => {
   return jest.fn(() => <h1>Mocked Overlay</h1>);
 });
